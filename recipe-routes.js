@@ -27,7 +27,7 @@ app.post('/recipes', function (req, res) {
 // GET
 // Get all open recipes
 app.get('/recipes', function (req, res) {
-  Todo.find({}, function (err, todos) {
+  Recipe.find({}, function (err, recipes) {
     if (err) {
       return res.json({ "success": false, "msg": "Error while creating Recipe", "error": err });
     }
