@@ -6,6 +6,12 @@ var RecipeSchema = new Schema({
         type: String,
         required: true
     },
+    ingredients: [
+      {
+        value: String,
+        description: String
+      }
+    ],
     created_at: Date,
 });
 
