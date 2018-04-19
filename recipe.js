@@ -10,8 +10,21 @@ var RecipeSchema = new Schema({
       {
         value: String,
         description: String
+        required: true
       }
     ],
+    directions: {
+      type: String,
+      required: true
+
+    }
+    servingSize: Number,
+    prepTime: Number,
+    cookTime: Number,
+    category: {
+      type: String,
+      required: true
+    }
     created_at: Date,
 });
 
