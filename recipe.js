@@ -6,6 +6,9 @@ var RecipeSchema = new Schema({
         type: String,
         required: true
     },
+    categories: [{
+        value: String
+    }],
     created_at: Date,
 });
 
