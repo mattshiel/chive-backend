@@ -16,7 +16,9 @@ app.post('/recipes', function (req, res) {
     category: req.body.category,
     prepTime: req.body.prepTime,
     cookTime: req.body.cookTime,
-    servingSize: req.body.servingSize
+    servingSize: req.body.servingSize,
+    ingredients: req.body.ingredients,
+    directions: req.body.directions
   });
 
   newRecipe.save(function (err) {
