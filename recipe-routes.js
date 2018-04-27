@@ -12,7 +12,7 @@ app.post('/recipes', function (req, res) {
   }
 
   var newRecipe = new Recipe({
-    title: req.body.title
+    title: req.body.title,
     category: req.body.category
     // prepTime: req.body.prepTime,
     // cookTime: req.body.cookTime,
