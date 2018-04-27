@@ -12,7 +12,8 @@ app.post('/recipes', function (req, res) {
   }
 
   var newRecipe = new Recipe({
-    title: req.body.title
+    title: req.body.title,
+    categories: req.body.categories
   });
 
   newRecipe.save(function (err) {
