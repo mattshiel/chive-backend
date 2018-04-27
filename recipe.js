@@ -6,10 +6,10 @@ var RecipeSchema = new Schema({
         type: String,
         required: true
     },
-    // category: {
-    //     type: String,
-    //     required: true
-    // },
+    category: {
+        type: String,
+        required: true
+    },
     // prepTime: {
     //     type: Number,
     //     required: true
