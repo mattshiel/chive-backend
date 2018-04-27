@@ -6,22 +6,22 @@ var RecipeSchema = new Schema({
         type: String,
         required: true
     },
-    category: {
-        type: String,
-        required: true
-    },
-    prepTime: {
-        type: Number,
-        required: true
-    },
-    cookTime: {
-        type: Number,
-        required: true
-    },
-    servingSize: {
-        type: Number,
-        required: true
-    },
+    // category: {
+    //     type: String,
+    //     required: true
+    // },
+    // prepTime: {
+    //     type: Number,
+    //     required: true
+    // },
+    // cookTime: {
+    //     type: Number,
+    //     required: true
+    // },
+    // servingSize: {
+    //     type: Number,
+    //     required: true
+    // },
     created_at: Date,
 });
 
