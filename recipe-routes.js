@@ -7,12 +7,12 @@ var Recipe = require('./recipe');
 // POST
 // Create a new recipe
 app.post('/recipes', function (req, res) {
-  if (!req.body.text) {
+  if (!req.body.title) {
     return res.status(400).send({ "success": false, "msg": "You need to enter a recipe!" });
   }
 
   var newRecipe = new Recipe({
-    text: req.body.text
+    title: req.body.title
   });
 
   newRecipe.save(function (err) {
@@ -20,7 +20,7 @@ app.post('/recipes', function (req, res) {
       console.log("some error: ", err);
       return res.json({ "success": false, "msg": "Error while creating Recipe", "error": err });
     }
-    res.status(201).send({ "success": true, "msg": 'Successful created new Recipe.' });
+    res.status(201).send({ "success": true, "msg": 'Successful created new recipe.' });
   });
 });
 
@@ -29,7 +29,7 @@ app.post('/recipes', function (req, res) {
 app.get('/recipes', function (req, res) {
   Recipe.find({}, function (err, recipes) {
     if (err) {
-      return res.json({ "success": false, "msg": "Error while creating Recipe", "error": err });
+      return res.json({ "success": false, "msg": "Error while creating recipe", "error": err });
     }
 
     res.status(200).send({ "success": true, "result": recipes });
