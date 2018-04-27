@@ -11,15 +11,15 @@ var RecipeSchema = new Schema({
         required: true
     },
     prepTime: {
-        type: String,
+        type: Number,
         required: true
     },
     cookTime: {
-        type: String,
+        type: Number,
         required: true
     },
     servingSize: {
-        type: String,
+        type: Number,
         required: true
     },
     created_at: Date,
