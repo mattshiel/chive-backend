@@ -20,13 +20,18 @@ if (process.env.NODE_ENV === 'development') {
   app.use(errorhandler())
 }
 
+// Include process.env.port because of MLab and Heroku
+// Without this line connecting to the port would fail
 var port = process.env.PORT || 3001;
 
 mongoose.Promise = global.Promise;
 mongoose.connect(config.database);
 
+// Get the API routes
+// Could be coded here but outsourcing to a different file is neater
 app.use(require('./recipe-routes'));
 
+// Create the server and pass in the port to listen on
 http.createServer(app).listen(port, function (err) {
   console.log('listening in http://localhost:' + port);
 });

@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+// Recipe Schema
 var RecipeSchema = new Schema({
     title: {
         type: String,
@@ -27,12 +28,13 @@ var RecipeSchema = new Schema({
     created_at: Date,
 });
 
+// Execute before the recipe is saved to the database
 RecipeSchema.pre('save', function (next) {
     var recipe = this;
     // get the current date
     var currentDate = new Date();
 
-    // if created_at doesn't exist, add to that field
+    // if created_at doesn't exist, add the date to that field
     if (!recipe.created_at) {
         recipe.created_at = currentDate;
     }
