@@ -22,7 +22,7 @@ var RecipeSchema = new Schema({
     ingredients: {
         type: String,
     },
-    ingredients: {
+    directions: {
         type: String,
     },
     created_at: Date,
